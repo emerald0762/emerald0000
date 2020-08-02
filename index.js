@@ -34,7 +34,7 @@ client.on('message', (message) => {
   if(message.content == '에메랄드 안녕!') {
     const exampleEmbed = new Discord.RichEmbed()
     .setColor('#97e5ef')
-    .setDescription(`<@${message.author.id}> 님 안녕하세요!`, '오늘도 좋은 하루 보내시고 계시나요?')
+    .setDescription(`<@${message.author.id}> 님 안녕하세요!`, '혹시 하실 말씀 있으시나요?')
     message.channel.send(exampleEmbed)
   }
 
@@ -50,8 +50,10 @@ client.on('message', (message) => {
       .addBlankField()
       .setTimestamp()
       .setFooter('ω주환ω가 만듬', img)
+  
+      message.channel.send(embed)
     }
-
+    
   if(message.content == '에메랄드 명령어 리스트') {
     let img = 'https://postfiles.pstatic.net/MjAyMDA3MzFfMjcz/MDAxNTk2MTYzNDM4MDAw.xAcIx0pRmoUG_l4ItLBd7T_OaIIwtjvjbVGyKVFzblAg.uOo7ghNDGWR5iCuLyD_S43IhPwAiXQ-q3nH2XjG8o5Mg.JPEG.battleground_bloger/image0.jpg?type=w773';
     let embed = new Discord.RichEmbed()
