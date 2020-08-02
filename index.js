@@ -20,7 +20,7 @@ client.on('message', (message) => {
   if(message.author.bot) return;
 
   if(message.content == '에메랄드 안녕') {
-    return message.reply('안녕하세요!!');
+    return message.message('안녕하세요!!');
   }
 
   if(message.content == '에메랄드 어그로') {
