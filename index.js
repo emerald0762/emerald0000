@@ -20,7 +20,7 @@ client.on('message', (message) => {
   if(message.author.bot) return;
 
   if(message.content == '에메랄드 안녕') {
-    return message.message('안녕하세요!!');
+    return message.reply('안녕하세요!!');
   }
 
   if(message.content == '에메랄드 어그로') {
@@ -28,9 +28,8 @@ client.on('message', (message) => {
   }
 
   if(message.content == '에메랄드 안녕') {
-    return message.message('안녕하세요!!');
+    return message.reply('안녕하세요!!');
   }
-
 
   if(message.content == '에메랄드 명령어 리스트') {
     let img = 'https://postfiles.pstatic.net/MjAyMDA3MzFfMjcz/MDAxNTk2MTYzNDM4MDAw.xAcIx0pRmoUG_l4ItLBd7T_OaIIwtjvjbVGyKVFzblAg.uOo7ghNDGWR5iCuLyD_S43IhPwAiXQ-q3nH2XjG8o5Mg.JPEG.battleground_bloger/image0.jpg?type=w773';
@@ -58,7 +57,7 @@ client.on('message', (message) => {
       {name: '에메랄드 안녕', desc: '에메랄드가 인사를 해요!'},
       {name: '에메랄드 명령어 리스트', desc: '다른 봇들의 명령어 보여주기'},
       {name: '에메랄드 전체공지', desc: 'dm으로 전체 공지 보내기(관리자 권한 필요!)'},
-      {name: '에메랄드 어그로', desc: '미안하다 이거 보여주려고 어그로끌었다...'},
+      {name: '에메랄드 정보', desc: '에메랄드에 대한 정보!'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
