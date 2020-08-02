@@ -30,6 +30,27 @@ client.on('message', (message) => {
   if(message.content == '에메랄드 안녕') {
     return message.reply('안녕하세요!!');
   }
+  
+  if(message.content == '에메랄드 안녕!') {
+    const exampleEmbed = new Discord.RichEmbed()
+    .setColor('#97e5ef')
+    .setDescription(`<@${message.author.id}> 님 안녕하세요!`, '오늘도 좋은 하루 보내시고 계시나요?')
+    message.channel.send(exampleEmbed)
+  }
+
+  if(message.content == '에메랄드 정보') {
+    let img = 'https://postfiles.pstatic.net/MjAyMDA3MzFfMjcz/MDAxNTk2MTYzNDM4MDAw.xAcIx0pRmoUG_l4ItLBd7T_OaIIwtjvjbVGyKVFzblAg.uOo7ghNDGWR5iCuLyD_S43IhPwAiXQ-q3nH2XjG8o5Mg.JPEG.battleground_bloger/image0.jpg?type=w773';
+    let embed = new Discord.RichEmbed()
+      .setTitle('에메랄드봇에 대한 정보')
+      .setAuthor('Made by ω주환ω')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('탄생일', '2020년 7월 31일')
+      .addField('빈칸', '뭐 넣을까')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('ω주환ω가 만듬', img)
+    }
 
   if(message.content == '에메랄드 명령어 리스트') {
     let img = 'https://postfiles.pstatic.net/MjAyMDA3MzFfMjcz/MDAxNTk2MTYzNDM4MDAw.xAcIx0pRmoUG_l4ItLBd7T_OaIIwtjvjbVGyKVFzblAg.uOo7ghNDGWR5iCuLyD_S43IhPwAiXQ-q3nH2XjG8o5Mg.JPEG.battleground_bloger/image0.jpg?type=w773';
