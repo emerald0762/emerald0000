@@ -6,6 +6,7 @@ const welcomeChannelComment = "환영합니다!!";
 
 client.on('ready', () => {
   console.log('봇 ON!!');
+  client.user.setPresence({ game: { name: '에메랄드 도움말을 쳐보세요.' }, status: 'online' })
 });
 
 client.on("guildMemberRemove", (member) => {
@@ -21,8 +22,8 @@ client.on('message', (message) => {
 
   if(message.content == '에메랄드 안녕') {
     const exampleEmbed = new Discord.RichEmbed()
-    .setColor('#97e5ef')
-    .setDescription(`<@${message.author.id}> 님 안녕하세요!`+ '혹시 하실 말씀 있으신가요?')
+    .setColor('#01DFA5')
+    .setDescription(`<@${message.author.id}> 님 안녕하세요!`+ ' 혹시 하실 말씀 있으신가요?')
     message.channel.send(exampleEmbed)
   }
 
@@ -39,10 +40,12 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('에메랄드봇에 대한 정보')
       .setAuthor('Made by ω주환ω')
+      .setColor('#97e5ef')
       .setThumbnail(img)
       .addBlankField()
       .addField('탄생일', '2020년 7월 31일')
-      .addField('뭐 넣을까', '뭐 넣을까')
+      .addField('주인', 'ω주환ω')
+      .addField('좋아하는 것', '다이아몬드와 놀기')
       .addBlankField()
       .setTimestamp()
       .setFooter('ω주환ω가 만듬', img)
@@ -55,6 +58,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('명령어 리스트')
       .setAuthor('Made by ω주환ω')
+      .setColor('#97e5ef')
       .setThumbnail(img)
       .addBlankField()
       .addField('에메랄드 명령어', '에메랄드 도움말')
@@ -81,7 +85,7 @@ client.on('message', (message) => {
     let commandStr = '';
     let embed = new Discord.RichEmbed()
       .setAuthor('에메랄드봇의 도움말', helpImg)
-      .setColor('#186de6')
+      .setColor('#97e5ef')
       .setFooter(`에메랄드봇`)
       .setTimestamp()
     
