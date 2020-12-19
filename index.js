@@ -34,6 +34,12 @@ client.on('message', (message) => {
     message.channel.send(exampleEmbed)
   }
 
+  if(message.content == '에메랄드 사랑해') {
+    const exampleEmbed = new Discord.RichEmbed()
+    .setColor('#01DFA5')
+    .setDescription(`<@${message.author.id}> 님! 저도요!`+ ' 절 좋아해주셔서 감사합니다!')
+    message.channel.send(exampleEmbed)
+  }
 
   if(message.content == '에메랄드 정보') {
     let img = 'https://gamepedia.cursecdn.com/minecraft_ko_gamepedia/6/6a/Emerald.png?version=37ba648ee37d87a1deefc3ae8adac3a7';
@@ -46,6 +52,7 @@ client.on('message', (message) => {
       .addField('탄생일', '2020년 7월 31일')
       .addField('주인', 'ω주환ω')
       .addField('좋아하는 것', '다이아몬드와 놀기')
+      .addField('좋아하는 게임', '마인크래프트')
       .addBlankField()
       .setTimestamp()
       .setFooter('ω주환ω가 만듬', img)
