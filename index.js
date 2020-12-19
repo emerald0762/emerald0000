@@ -88,6 +88,7 @@ client.on('message', (message) => {
       {name: '에메랄드 명령어 리스트', desc: '다른 봇들의 명령어 보여주기'},
       {name: '에메랄드 전체공지', desc: 'dm으로 전체 공지 보내기(관리자 권한 필요!)'},
       {name: '에메랄드 정보', desc: '에메랄드에 대한 정보!'},
+      {name: '에메랄드 사랑해', desc: '에메랄드에 사랑을 표현해요!'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
