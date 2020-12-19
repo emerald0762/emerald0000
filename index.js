@@ -61,7 +61,7 @@ client.on('message', (message) => {
     }
     
   if(message.content == '에메랄드 명령어 리스트') {
-    let img = 'https://postfiles.pstatic.net/MjAyMDA3MzFfMjcz/MDAxNTk2MTYzNDM4MDAw.xAcIx0pRmoUG_l4ItLBd7T_OaIIwtjvjbVGyKVFzblAg.uOo7ghNDGWR5iCuLyD_S43IhPwAiXQ-q3nH2XjG8o5Mg.JPEG.battleground_bloger/image0.jpg?type=w773';
+    let img = 'https://gamepedia.cursecdn.com/minecraft_ko_gamepedia/6/6a/Emerald.png?version=37ba648ee37d87a1deefc3ae8adac3a7';
     let embed = new Discord.RichEmbed()
       .setTitle('명령어 리스트')
       .setAuthor('Made by ω주환ω')
@@ -82,7 +82,7 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == '에메랄드 도움말') {
-    let helpImg = 'https://postfiles.pstatic.net/MjAyMDA3MzFfMjcz/MDAxNTk2MTYzNDM4MDAw.xAcIx0pRmoUG_l4ItLBd7T_OaIIwtjvjbVGyKVFzblAg.uOo7ghNDGWR5iCuLyD_S43IhPwAiXQ-q3nH2XjG8o5Mg.JPEG.battleground_bloger/image0.jpg?type=w773';
+    let helpImg = 'https://gamepedia.cursecdn.com/minecraft_ko_gamepedia/6/6a/Emerald.png?version=37ba648ee37d87a1deefc3ae8adac3a7';
     let commandList = [
       {name: '에메랄드 안녕', desc: '에메랄드가 인사를 해요!'},
       {name: '에메랄드 명령어 리스트', desc: '다른 봇들의 명령어 보여주기'},
